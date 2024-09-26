@@ -46,4 +46,28 @@ function handleOption(userInput) {
   
   // Rolagem automática para o final do chat
   chatBox.scrollTop = chatBox.scrollHeight;
+  
+  // Mostrar novamente as opções após a resposta
+  showOptions();
 }
+
+function showOptions() {
+  const options = document.getElementById('options');
+  
+  // Limpa as opções antigas (se necessário)
+  options.innerHTML = '';
+  
+  // Adiciona as opções de interação novamente
+  options.innerHTML = `
+    <button class="option-btn" onclick="handleOption('O que é a Dengue?')">O que é a Dengue?</button>
+    <button class="option-btn" onclick="handleOption('Sintomas da Dengue')">Sintomas da Dengue</button>
+    <button class="option-btn" onclick="handleOption('Prevenção da Dengue')">Prevenção da Dengue</button>
+    <button class="option-btn" onclick="handleOption('Tratamento da Dengue')">Tratamento da Dengue</button>
+    <button class="option-btn" onclick="handleOption('Mapa da Dengue no Brasil')">Mapa da Dengue no Brasil</button>
+    <button class="option-btn" onclick="handleOption('Acessar Dashboard')">Acessar Dashboard</button>
+    <button class="option-btn" onclick="handleOption('Ver Gráfico da Dengue')">Ver Gráfico da Dengue</button>
+  `;
+}
+
+// Exibe as opções no início
+window.onload = showOptions;
