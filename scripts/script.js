@@ -1,3 +1,27 @@
+let isMaximized = false;
+
+function toggleChat() {
+  const chatContainer = document.getElementById('chat-container');
+  if (isMaximized) {
+    chatContainer.style.width = '300px';
+    chatContainer.style.height = '400px';
+  } else {
+    chatContainer.style.width = '600px';  // Largura quando maximizado
+    chatContainer.style.height = '800px'; // Altura quando maximizado
+  }
+  isMaximized = !isMaximized;
+}
+
+function handleOption(option) {
+  const message = document.createElement('div');
+  message.className = 'message user-message';
+  message.textContent = option;
+  document.getElementById('chat-box').appendChild(message);
+  // Aqui você pode adicionar a lógica para o bot responder
+}
+
+
+
 function handleOption(userInput) {
   const chatBox = document.getElementById('chat-box');
   
