@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot sobre Dengue e Dashboard</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-box" id="chat-box">
+      <div class="message bot-message">Olá! Sou um chatbot e vou te ajudar a entender mais sobre a Dengue. Como posso te ajudar hoje?</div>
+    </div>
+    <div class="options" id="options">
+      <button class="option-btn" onclick="handleOption('O que é a Dengue?')">O que é a Dengue?</button>
+      <button class="option-btn" onclick="handleOption('Sintomas da Dengue')">Sintomas da Dengue</button>
+      <button class="option-btn" onclick="handleOption('Prevenção da Dengue')">Prevenção da Dengue</button>
+      <button class="option-btn" onclick="handleOption('Tratamento da Dengue')">Tratamento da Dengue</button>
+      <button class="option-btn" onclick="handleOption('Mapa da Dengue no Brasil')">Mapa da Dengue no Brasil</button>
+      <button class="option-btn" onclick="handleOption('Acessar Dashboard')">Acessar Dashboard</button>
+      <button class="option-btn" onclick="handleOption('Ver Gráfico da Dengue')">Ver Gráfico da Dengue</button>
+    </div>
+  </div>
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>
